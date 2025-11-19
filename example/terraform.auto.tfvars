@@ -1,0 +1,5 @@
+  cyberark_tenant_subdomain = "cctest1"
+  identity_oauth_url        = ""
+  identity_client_id        = "api-terraform-1@cyberark.cloud.10061"
+  identity_client_secret    = ""
+  identity_scope            = "all"
