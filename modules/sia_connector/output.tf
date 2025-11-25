@@ -11,6 +11,6 @@ output "admin_username" {
 }
 
 output "admin_password" {
-  value     = var.admin_password
+  value     = random_password.vm_admin_password.result
   sensitive = true
 }

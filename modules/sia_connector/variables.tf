@@ -31,6 +31,10 @@ variable "subnet_name" {
 variable "vm_name" {
   type        = string
   description = "Name of the connector VM."
+  validation {
+    condition     = length(var.vm_name) <= 15
+    error_message = "Maximum length for the (windows) VM Name is 15 characters"
+  }
 }
 
 variable "vm_size" {
@@ -42,12 +46,6 @@ variable "vm_size" {
 variable "admin_username" {
   type        = string
   description = "Local admin username for the connector VM."
-}
-
-variable "admin_password" {
-  type        = string
-  description = "Local admin password for the connector VM."
-  sensitive   = true
 }
 
 variable "cyberark_tenant_subdomain" {
